@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Shop 4 Socks</title>
+    <!-- Import Styles -->
+    <link rel="stylesheet" href="assets/style.css" />
+    <!-- Import Vue.js -->
+    <script src="https://unpkg.com/vue@next"></script>
+
+  </head>
+  <body>
+  
+    <div id="app">
+      <div class="nav-bar">
+        <ul id="nav-ul">
+          <li id="nav-li"><a href="index.html">Home</a></li>
+          <li id="nav-li"><a href="signup.html">Sign Up</a></li>
+          <li id="nav-li"><a href="contact.html">Contact</a></li>
+          <li id="nav-li"><a href="">About</a></li>
+        </ul> 
+
+
+
+      </div>
+
+      <div class="cart">Cart({{ cart.length }})</div>
+
+      <product-display :premium="premium"
+                        @add-to-cart="updateCart"
+                       @remove-from-cart="removeById"
+      ></product-display>
+
+
+    
+    </div>
+
+    <!-- Import Js -->
+    <script src="js/main.js"></script>
+    <script src="components/ProductDisplay.js"></script>
+    <script src="components/ProductDetails.js"></script>
+    <script src="components/reviewForm.js"></script>
+    <script src="components/reviewList.js"></script>
+    
+    <script>
+      // on va monter notre app dans le DOM
+      const mountedApp = app.mount("#app");
+    </script>
+  </body>
+</html>
+
+
+
+
